@@ -26,24 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
             nav.style.background = 'rgba(0, 0, 0, 0.8)';
         }
 
-        // Afficher le bouton "Retour en haut" si défilé de plus de 200px
-        if (window.scrollY > 200) {
-            scrollButton.style.opacity = '1';
-            scrollButton.style.pointerEvents = 'auto';
-        } else {
-            scrollButton.style.opacity = '0';
-            scrollButton.style.pointerEvents = 'none';
-        }
-
-        // Afficher ou masquer le bouton "Retour en haut" selon la position
-        const footerHeight = document.querySelector('footer').offsetHeight;
-        const scrollPosition = window.scrollY + window.innerHeight;
-        if (scrollPosition < document.body.scrollHeight - footerHeight - 200) {
-            scrollButton.classList.add('show');
-        } else {
-            scrollButton.classList.remove('show');
-        }
-    });
+     
 
     // Animation au survol des icônes sociales
     socialIcons.forEach(icon => {
@@ -98,28 +81,3 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-document.addEventListener("DOMContentLoaded", () => {
-    const form = document.getElementById("avis-form");
-    const confirmationMessage = document.getElementById("confirmation-message");
-
-    form.addEventListener("submit", (event) => {
-        event.preventDefault(); // Empêche l'envoi du formulaire par défaut
-
-        // Vérifie si toutes les questions obligatoires ont une réponse
-        const allQuestionsAnswered = [...form.querySelectorAll(".radio-group")]
-            .every((group) => group.querySelector("input:checked") !== null);
-
-        if (allQuestionsAnswered) {
-            // Affiche le message de confirmation
-            confirmationMessage.style.display = "block";
-
-            // Réinitialise le formulaire après un léger délai (optionnel)
-            setTimeout(() => {
-                form.reset();
-                confirmationMessage.style.display = "none"; // Cache le message
-            }, 5000); // Message visible pendant 5 secondes
-        } else {
-            alert("Veuillez répondre à toutes les questions avant de valider.");
-        }
-    });
-});
