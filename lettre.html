@@ -58,24 +58,6 @@
 
    
     
-    <script>
-        // Ajouter l'effet d'animation lors du défilement
-        document.addEventListener('DOMContentLoaded', () => {
-            const elementsToAnimate = document.querySelectorAll('.animate-on-scroll');
-            const animateOnScroll = () => {
-                const windowHeight = window.innerHeight;
-                elementsToAnimate.forEach(el => {
-                    const elementTop = el.getBoundingClientRect().top;
-                    if (elementTop <= windowHeight - 100) {
-                        el.classList.add('visible');
-                    }
-                });
-            };
-
-            window.addEventListener('scroll', animateOnScroll);
-            animateOnScroll(); // S'assurer que l'animation se déclenche dès le chargement
-        });
-    </script>
 </body>
 </html>
   
@@ -84,8 +66,4 @@
   
   
   
-  
-  <!-- Bouton de retour en haut -->
-<a href="#" class="scroll-to-top">
-    ↑ Retour en haut
-</a>
+
