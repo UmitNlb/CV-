@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lettre de Motivation - Umit Nalbant</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <style>
+        /* Ajout d'un style d'animation pour les éléments */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation fixe en haut -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="nav-link">Accueil</a></li>
+                <li><a href="cv.html" class="nav-link">CV</a></li>
+                <li><a href="lettre.html" class="nav-link">Lettre de Motivation</a></li>
+                <li><a href="pourquoi.html" class="nav-link">Pourquoi me choisir</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+				<li><a href="avis.html" class="nav-link">Avis</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Section Lettre de Motivation -->
+        <section class="animate-on-scroll">
+            <img src="images/image4.webp" alt="Photo de Umit Nalbant" style="width:200px; height:auto; border-radius:50%; margin-bottom: 20px;">
+            <h2>Madame, Monsieur,</h2>
+            <p>Actuellement élève en Seconde Ciel au Lycée Château Blanc, je suis à la recherche d’un stage dans le cadre de ma formation. Votre entreprise, active dans le domaine de l’informatique / de l’électricité, m’intéresse particulièrement, et je souhaite découvrir votre environnement de travail afin d’y apprendre des compétences concrètes.</p>
+
+            <p>Durant mon précédent stage dans un cabinet d'infirmiers, j'ai acquis un sens des responsabilités et de l'organisation, deux qualités essentielles dans le monde professionnel. Même si ce stage était dans un domaine différent, il m’a permis de développer mon autonomie, ma rigueur et mon adaptabilité, des compétences que je suis prêt à mettre à profit dans votre entreprise.</p>
+
+            <p>Je suis convaincu que ce stage me permettra d’élargir mes connaissances et de mieux comprendre les attentes du milieu professionnel, qu'il s'agisse du secteur informatique ou de l’électricité, deux domaines en lien avec ma filière actuelle. Je suis prêt à m’investir pleinement dans les missions qui me seront confiées et à apporter une contribution utile à vos projets.</p>
+
+            <p>Je me tiens à votre disposition pour toute information complémentaire concernant ma candidature. Je vous remercie par avance pour l’attention portée à ma demande et espère avoir l’opportunité de rejoindre votre équipe.</p>
+
+            <p>Dans l’attente de votre réponse, en vous remerciant par avance pour l'attention portée à ma candidature, je vous adresse mes salutations les plus respectueuses.</p>
+
+            <p><strong>Umit Nalbant</strong></p> 
+			
+
+        
+    </main>
+
+   
+    
+    <script>
+        // Ajouter l'effet d'animation lors du défilement
+        document.addEventListener('DOMContentLoaded', () => {
+            const elementsToAnimate = document.querySelectorAll('.animate-on-scroll');
+            const animateOnScroll = () => {
+                const windowHeight = window.innerHeight;
+                elementsToAnimate.forEach(el => {
+                    const elementTop = el.getBoundingClientRect().top;
+                    if (elementTop <= windowHeight - 100) {
+                        el.classList.add('visible');
+                    }
+                });
+            };
+
+            window.addEventListener('scroll', animateOnScroll);
+            animateOnScroll(); // S'assurer que l'animation se déclenche dès le chargement
+        });
+    </script>
+</body>
+</html>
+  
+  
+  
+  
+  
+  
+  
+  <!-- Bouton de retour en haut -->
+<a href="#" class="scroll-to-top">
+    ↑ Retour en haut
+</a>
